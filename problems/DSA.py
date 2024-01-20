@@ -94,20 +94,65 @@ digits = "4"
 #             final.append(str(ele1)+str(ele2))
 
 # print(final)
-nums = [5,7,7,8,8,10]
-target = 8        
-res = []
-for j in range(0,len(nums),-1):
-    if target == nums[j]:
-        res.append(j)
-        break
-for i in range(len(nums)):
-    if target == nums[i]:
-        res.append(i)
+##########################################
+# nums = [5,7,7,8,8,10]
+# target = 8        
+# res = []
+# for j in range(0,len(nums),-1):
+#     if target == nums[j]:
+#         res.append(j)
+#         break
+# for i in range(len(nums)):
+#     if target == nums[i]:
+#         res.append(i)
         
 
 
-if res:        
-    print(res)
-else:
-    print([-1,-1])
+# if res:        
+#     print(res)
+# else:
+#     print([-1,-1])
+
+#######################################Nth root of m
+# def NthRoot(n: int, m: int) -> int:
+#     low = 1
+#     high = m
+#     while low<=high:
+#         mid = (low+high)//2
+#         mid_power = mid**n
+#         if mid_power < m:
+#             low = mid+1
+#             print('1')
+#         elif mid_power > m:
+#             high = mid-1
+#             print('2')
+#         elif mid_power == m:
+#             return mid
+#     return -1  
+
+# n = int(input())
+# m = int(input())
+# result = NthRoot(n, m)
+# print(result)
+##############################koko eating bananas
+# import math
+# class Solution:
+#     def minEatingSpeed(self, piles: List[int], h: int) -> int:
+#         def max_hours(arr, hour_rate):
+#             total_hours = 0
+#             n = len(arr)
+#             for i in range(n):
+#                 total_hours += math.ceil(arr[i]/hour_rate)
+#             return total_hours
+#         low = 1
+#         high = max(piles)
+#         while low <= high:
+#             mid = (low+high)//2
+#             ans = max_hours(piles, mid)
+#             if ans > h:
+#                 low = mid+1
+#             elif ans <= h:
+#                 high = mid-1
+#         return low
+#####################################################
+        
