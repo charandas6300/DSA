@@ -154,5 +154,52 @@ digits = "4"
 #             elif ans <= h:
 #                 high = mid-1
 #         return low
-#####################################################
-        
+#####################################################search in 2D
+# def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+#         m = len(matrix[0])
+#         n = len(matrix)
+#         low = 0
+#         high = m*n -1
+#         while low <= high:
+#             mid = (low+high)//2
+#             row = mid // m
+#             col = mid%m
+#             if target == matrix[row][col]:
+#                 return True
+#             elif target < matrix[row][col]:
+#                 high = mid-1
+#             else:
+#                 low = mid+1
+#         return False     
+################################################strings
+#############Reverse in a string
+
+# def reverseWords(s: str) -> str:
+#         arr = s.split(' ')
+#         arr2 = []
+#         print("arr1", arr)
+#         for i in range(len(arr)-1,-1,-1):
+#             if arr[i] != "":
+#                 arr2.append(arr[i])
+#         print(arr2)        
+#         return " ".join(arr2)   
+
+# ans = reverseWords("a good   example")
+# print(ans)        
+
+########################remove outer parenthesis
+
+# def removeOuterParentheses(s: str) -> str:
+#     res = []
+#     opened = 0
+#     for char in s:
+#         if char == "(" and opened>0:
+#             res.append(char)
+#         elif char == ")"  and opened>1:
+#             res.append(char)
+#         opened += 1 if char == "(" else -1
+#     return "".join(res)           
+
+# ans = removeOuterParentheses("(()())(())(()(()))")   
+# print(ans)     
+         
