@@ -202,4 +202,35 @@ digits = "4"
 
 # ans = removeOuterParentheses("(()())(())(()(()))")   
 # print(ans)     
-         
+###################Roman to Integers
+# def romanToInt(self, s: str) -> int:
+#     dictn = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000, 'IV':4, 'IX':9, 'XL':40, 'XC':90, 'CD':400, 'CM':900}
+#     total = 0
+#     i = 0
+#     while i < len(s):
+#         if s[i:i+2] in dictn:
+#             total+=dictn[s[i:i+2]]
+#             i+=2
+#         elif s[i] in dictn:
+#             total+=dictn[s[i]]
+#             i+=1
+#     return total            
+#################longest palindromic substring
+# class Solution:
+#     def longestPalindrome(self, s: str) -> str:
+#         count = 0
+#         ans = ""
+#         if len(s) == 1:
+#             return s
+#         if len(s) == 2:
+#             if s[0] == s[1]:
+#                 return s
+#             else:
+#                 return s[1]        
+#         for i in range(len(s)):
+#             for j in range(i+1, len(s)+1):
+#                 if s[i:j] == s[i:j][::-1]:
+#                     if count < len(s[i:j]):
+#                         count = len(s[i:j])
+#                         ans = s[i:j]
+#         return ans
