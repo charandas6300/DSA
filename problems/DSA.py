@@ -234,3 +234,17 @@ digits = "4"
 #                         count = len(s[i:j])
 #                         ans = s[i:j]
 #         return ans
+####################################Linked list,delnode
+# class Solution:
+#     def deleteNode(self, node):
+    
+#         node.val = node.next.val
+#         node.next = node.next.next
+##############################LLsearch
+# def searchInLinkedList(head, k):
+#     n = head
+#     while n is not None:
+#         if n.data == k:
+#             return 1
+#         n=n.next    
+#     return 0          
