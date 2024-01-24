@@ -247,4 +247,23 @@ digits = "4"
 #         if n.data == k:
 #             return 1
 #         n=n.next    
-#     return 0          
+#     return 0     
+     
+######################DLL del last Node
+
+# def deleteLastNode(head: Node) -> Node:
+#     curr = head
+
+#     if curr.next is None:
+#         return None
+
+#     while curr.next is not None:
+#         temp = curr.next
+#         temp.prev = curr
+#         curr = curr.next
+
+#     curr = curr.prev
+#     curr.next = None
+
+#     return head    
+            
