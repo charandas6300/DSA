@@ -266,4 +266,19 @@ digits = "4"
 #     curr.next = None
 
 #     return head    
+###################################reverse LL
+# def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+#         if not head:
+#             return None
+
+#         prev = None
+#         current = head
+
+#         while current is not None:
+#             temp = current.next
+#             current.next = prev
+#             prev = current
+#             current = temp
+
+#         return prev 
             
