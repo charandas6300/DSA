@@ -64,7 +64,7 @@
 #         max_key.append(key)
 
 # print(max_key)  
-digits = "4"
+# digits = "4"
 # dictnry = {2:['a','b','c'],3:['d','e','f'],4:['g','h','i'],5:['j','k','l'],6:['m','n','o'],7:['p','q','r','s'],8:['t','u','v'],9:['w','x','y','z']}
 # result = [['d', 'e', 'f'], ['g', 'h', 'i']]
 # for i in digits:
@@ -241,8 +241,8 @@ digits = "4"
 #         node.val = node.next.val
 #         node.next = node.next.next
 ##############################LLsearch
-# def searchInLinkedList(head, k):
-#     n = head
+# def searchInLinkedList(head1, k):
+#     n = head1
 #     while n is not None:
 #         if n.data == k:
 #             return 1
@@ -251,8 +251,8 @@ digits = "4"
      
 ######################DLL del last Node
 
-# def deleteLastNode(head: Node) -> Node:
-#     curr = head
+# def deleteLastNode(head1: Node) -> Node:
+#     curr = head1
 
 #     if curr.next is None:
 #         return None
@@ -265,14 +265,14 @@ digits = "4"
 #     curr = curr.prev
 #     curr.next = None
 
-#     return head    
+#     return head1    
 ###################################reverse LL
-# def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-#         if not head:
+# def reverseList(self, head1: Optional[ListNode]) -> Optional[ListNode]:
+#         if not head1:
 #             return None
 
 #         prev = None
-#         current = head
+#         current = head1
 
 #         while current is not None:
 #             temp = current.next
@@ -281,4 +281,40 @@ digits = "4"
 #             current = temp
 
 #         return prev 
-            
+#################################### LL cycle
+# def hasCycle(self, head: Optional[ListNode]) -> bool:
+
+#         temp = head
+
+#         node_set = set()
+
+#         while temp is not None:
+#             if temp in node_set:
+#                 return True
+#             node_set.add(temp)
+#             temp = temp . next
+#         return False         
+##################################Lenth of a loop using LL
+# def lengthOfLoop(head: Node) -> int:
+#     temp = head
+
+#     node_set = set()
+#     node_list = []
+
+#     while temp.next is not None:
+#         if temp in node_set:
+#             ans = temp.val
+#             break
+#         node_set.add(temp)
+#         node_list.append(temp.val)
+#         temp = temp.next
+
+#     if temp.next is None:
+#         return 0    
+        
+
+#     for i in range(len(node_list)):
+#         if node_list[i] == ans:
+#             return len(node_list[i:])
+
+        
