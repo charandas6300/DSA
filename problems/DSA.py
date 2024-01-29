@@ -316,5 +316,86 @@
 #     for i in range(len(node_list)):
 #         if node_list[i] == ans:
 #             return len(node_list[i:])
+##########################Delete all occurrences of a given key in a doubly linked list
 
-        
+# def deleteAllOccurrences(head: Node, k: int) -> Node:
+
+#     while head and head.data == k:
+#         head = head.next
+#         if head:
+#             head.prev = None
+
+#     head1 = head
+
+#     while head1 and head1.next:
+#         if head1.next.data == k:
+#             temp = head1.next.next
+#             head1.next = temp
+#             if temp:
+#                 temp.prev = head1
+#         else:    
+#             head1 = head1.next    
+
+#     if head1 and head1.data == k:
+#         head1.prev.next = None
+
+#     return head        
+######################################## Find pairs with given sum in doubly linked list
+# def findPairs(head: Node, k: int) -> [[int]]:
+#     arr = []
+
+
+#     while head and head.next:
+#         temp = head.next
+#         while temp: 
+#             if (head.data+temp.data) == k:
+#                 arr.append([head.data,temp.data])
+#             temp = temp.next
+
+#         head = head.next
+
+#     return arr     
+###########################################3recursion
+# def myAtoi(self, s: str) -> int:
+#         def recursive_helper(s, i, sign, parsed):
+#             if i == len(s) or not s[i].isdigit():
+#                 return min(max(parsed * sign, -2**31), 2**31 - 1)
+
+#             digit = int(s[i])
+#             new_parsed = parsed * 10 + digit
+
+#             return recursive_helper(s, i + 1, sign, new_parsed)
+
+#         s = s.lstrip()
+
+#         if not s:
+#             return 0
+
+#         sign = 1
+#         i = 0
+
+#         if s[i] == "+":
+#             i += 1
+#         elif s[i] == "-":
+#             i += 1
+#             sign = -1
+
+#         return recursive_helper(s, i, sign, 0)
+#######################################################pow(x,n)recursive
+# def myPow(self, x: float, n: int) -> float:
+#         def powFun(x, n):
+#             if n == 0:
+#                 return 1
+
+#             half_pow = powFun(x, n // 2)
+
+#             if n % 2 == 0:
+#                 return half_pow * half_pow
+#             else:
+#                 return x * half_pow * half_pow
+
+#         if n < 0:
+#             x = 1 / x
+#             n = -n
+
+#         return powFun(x, n)
