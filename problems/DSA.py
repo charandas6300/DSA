@@ -399,3 +399,17 @@
 #             n = -n
 
 #         return powFun(x, n)
+###################################################reverse array
+# def reverse(arr,l,r):
+#     if (l>=r):
+#         return
+#     temp = arr[l]
+#     arr[l] = arr[r]
+#     arr[r] = temp
+
+#     return reverse(arr, l+1,r-1)
+
+# arr = [1, 2, 3, 4, 5]
+# reverse(arr, 0, len(arr) - 1)  
+# print(arr)
+
