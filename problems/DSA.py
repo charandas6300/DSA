@@ -412,4 +412,13 @@
 # arr = [1, 2, 3, 4, 5]
 # reverse(arr, 0, len(arr) - 1)  
 # print(arr)
+################################fibonacci
+# def fibonac(n):
+#     if n == 0:
+#         return 0
+#     if (n==1 or n==2):
+#         return 1
+#     return fibonac(n-1)+fibonac(n-2)
 
+# ans = fibonac(9)
+# print(ans)            
