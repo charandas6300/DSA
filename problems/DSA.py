@@ -421,4 +421,22 @@
 #     return fibonac(n-1)+fibonac(n-2)
 
 # ans = fibonac(9)
-# print(ans)            
+# print(ans)       
+############################genarate parenthesis
+# def generateParenthesis(self, n: int) -> List[str]:
+    # result = []
+    # def generate_para(current_para, open_count, close):
+    #     if len(current_para) == 2*n:
+    #         result.append(current_para)
+    #         return
+
+    #     if open_count<n:
+    #         generate_para(current_para+"(",open_count + 1, close)
+    #     if close < open_count:
+    #         generate_para(current_para+")",open_count, close+1)
+
+    # generate_para("",0,0)  
+    # return result              
+
+
+             
