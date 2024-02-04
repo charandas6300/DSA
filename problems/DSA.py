@@ -436,7 +436,37 @@
     #         generate_para(current_para+")",open_count, close+1)
 
     # generate_para("",0,0)  
-    # return result              
+    # return result   
+################################ combo sum 1   
+# from typing import List
+# class Solution:       
+#     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+#         ans = []
+#         ds = []
+#         def comboSum(index, target):
+#             if index == len(candidates):
+#                 if target == 0:
+#                     ans.append(ds[:])
+#                 return
+
+#             if candidates[index] <= target:
+#                 ds.append(candidates[index])
+#                 comboSum(index, target- candidates[index])
+#                 ds.pop()
+#             comboSum(index+1, target)
+#         comboSum(0, target)    
+#         return ans
+
+# if __name__ == "__main__":
+#     obj = Solution()
+#     candidates = [2, 3, 6, 7]
+#     target = 7
+#     ans = obj.combinationSum(candidates, target)
+#     print("Combinations are: ")
+#     for i in range(len(ans)):
+#         for j in range(len(ans[i])):
+#             print(ans[i][j], end=" ")
+#         print()                        
 
 
              
