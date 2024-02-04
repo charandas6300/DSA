@@ -467,6 +467,27 @@
 #         for j in range(len(ans[i])):
 #             print(ans[i][j], end=" ")
 #         print()                        
+################################ combo sum 2
+# def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+#     ans = []
+#     result = []
+#     candidates.sort()
+#     def comboSum2(i, target):
+#         if target == 0:
+#             result.append(ans[:])
+#             return
 
-
+#         j = i
+#         for j in range(i, len(candidates)):
+#             if j > i and candidates[j] == candidates[j-1]:
+#                 continue
+#             if candidates[j] > target:
+#                 break
+            
+#             ans.append(candidates[j])
+#             comboSum2(j+1, target-candidates[j])
+#             ans.pop()
+#     comboSum2(0, target)        
+#     return result        
+                
              
