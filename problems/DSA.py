@@ -489,5 +489,36 @@
 #             ans.pop()
 #     comboSum2(0, target)        
 #     return result        
-                
-             
+###############################################################subsetsum1
+# def subsetSum(num: List[int]) -> List[int]:
+#     n = len(num)
+#     res = []
+#     def subSum(i, sums):
+#         if i == n:
+#             res.append(sums)
+#             return
+
+#         subSum(i+1, sums+num[i])
+
+#         subSum(i+1, sums)
+#     subSum(0, 0)    
+#     res.sort()
+#     return res             
+###############################################################subsetsum2
+# def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+#         n = len(nums)
+#         ans = []
+#         res = set()
+#         def subSum2(i, arr):
+#             res.add(tuple(sorted(arr)))
+
+#             for j in range(i,n):
+#                 arr.append(nums[j])
+#                 subSum2(j+1, arr)
+#                 arr.pop()
+
+#         subSum2(0,[])
+#         for j in res:
+#             ans.append(list(j))
+#         return ans            
+        
