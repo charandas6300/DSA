@@ -545,4 +545,35 @@
 #                 if dfs(i,j,0):
 #                     return True
 
-#         return False                 
+#         return False         
+###  
+# from typing import List
+# heights = [2,1,5,6,2,3]      
+
+# def maxSum(heights: List[int]) -> int:
+#     sum2 = 0
+#     for i in range(len(heights)-1):
+#         sum1 = heights[i] + heights[i+1]
+#         sum2 = max(sum1, sum2)
+#     print(sum2)    
+#     for j in range(len(heights)-1):
+#         if heights[j] + heights[j+1] == sum2:
+#             print(heights[j],heights[j+1])
+#             res = min(j,j+1)    
+#             return res     
+
+# result = maxSum(heights)
+# print(result)
+############
+# nums = [1,3,-1,-3,5,3,6,7]
+# j = 3
+# res = []
+# for i in range(len(nums)-j):
+#     for p in range(j, len(nums)+1):
+#         if p-i == j:
+#             pass
+#             # print(nums[i:p])
+#         # res.append(max(nums[i:p]))
+# ans = len(nums) - j
+# ans2 = nums[ans:len(nums)+1]
+# print(ans2)
