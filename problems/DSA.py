@@ -577,3 +577,40 @@
 # ans = len(nums) - j
 # ans2 = nums[ans:len(nums)+1]
 # print(ans2)
+#////////dewdeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+# class MinHeap:
+#     def __init__(self):
+#         self.heap = []
+
+#     def extractMinElement(self):
+#         if not self.heap:
+#             return None
+
+#         min_ele = self.heap[0]
+
+#         self.heap[0] = self.heap.pop()
+
+#         index = 0
+#         while True:
+#             left = 2*index + 1
+#             right = 2*index + 2
+#             small = index
+
+#             if left<len(self.heap) and self.heap[left] < self.heap[small]:
+#                 small = left
+
+#             if right<len(self.heap) and self.heap[right]<self.heap[small]:
+#                 small = right
+
+#             if small != index:
+#                 self.heap[small],self.heap[index] = self.heap[index],self.heap[small]
+#                 index = small
+#             else:
+#                 break
+#         return min_ele
+#33333333333333333333333333333333333333333333333333333333
+# from collections import Counter
+# arr = ['A','b','c','c','d','a','A','b','c','c','d','a']
+# count = Counter(arr)
+# print(count)
+
