@@ -613,4 +613,45 @@
 # arr = ['A','b','c','c','d','a','A','b','c','c','d','a']
 # count = Counter(arr)
 # print(count)
+# Given weights and values
 
+
+
+# def maximumValue(items, n, W):
+#     avg_weights = []
+
+#     for i in range(n):
+#         value, weight = items[i]
+#         avg_weights.append((i, float(value) / float(weight)))
+
+#     sorted_avg_weights = dict(sorted(avg_weights, key=lambda x: x[1], reverse=True))
+
+#     sum_ret = 0
+#     i = 0
+#     while W > 0 and i<n:
+#         index = list(sorted_avg_weights.keys())[i]
+#         value_i,weight_i = items[index]
+
+#         if W > weight_i:
+#             sum_ret+=value_i
+#             W-=weight_i
+#         else:
+#             sum_ret += (value_i / weight_i) * W
+#             break    
+#         i+=1  
+
+
+#     return round(sum_ret, 2)   
+
+
+# values = [3, 6, 1, 4]
+# weights = [6, 1, 5, 3]
+
+# # Create a dictionary representation of items
+# items = {i: (values[i], weights[i]) for i in range(len(weights))}
+
+# # Given knapsack size
+# W = 10
+# result = maximumValue(items, 4, W)
+
+# print(result)
