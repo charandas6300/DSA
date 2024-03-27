@@ -686,3 +686,20 @@
 #         dp[i] = min(left,right)
         
 #     return dp[n-1]   
+##################frog jump for kth steps
+# def minimizeCost(n: int, k: int, heights: List[int]) -> int:
+#     if n<=1:
+#         return 0
+
+        
+#     dp = [0] * n
+#     dp[1] = abs(heights[0] - heights[1])
+
+#     for i in range(2, n):
+#         min_cost = float('inf')
+#         for j in range(max(0, i - k), i):
+#             cost = dp[j] + abs(heights[i] - heights[j])
+#             min_cost = min(min_cost, cost)
+#         dp[i] = min_cost
+
+#     return dp[-1]
