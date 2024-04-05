@@ -780,7 +780,22 @@
 #                 dp[i][j] = min(down,diagonal)
 
 #         return dp[0][0]         
-###################################
+###################################min falling path sum
+# class Solution:
+#     def minFallingPathSum(self, matrix: List[List[int]]) -> int:
+#         n = len(matrix)
+#         dp = [[0 for j in range(n)]for i in range(n)]
 
+#         dp[0] = matrix[0]
+
+#         for i in range(1,n):
+#             for j in range(n):
+#                 left = dp[i-1][max(0,j-1)]
+#                 down = dp[i-1][j]
+#                 right = dp[i-1][min(n-1,j+1)]
+
+#                 dp[i][j] =matrix[i][j]+ min(left,down,right)
+#         return min(dp[n-1])          
+        
 
         
