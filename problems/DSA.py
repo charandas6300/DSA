@@ -703,3 +703,84 @@
 #         dp[i] = min_cost
 
 #     return dp[-1]
+#################################house robber
+# class Solution:
+#     def rob(self, nums: List[int]) -> int:
+#         if len(nums)<=1:
+#             return nums[0] if nums else 0    
+
+#         dp = [0] * len(nums)
+#         dp[0] = nums[0]
+#         dp[1] = max(nums[1],nums[0])
+#         for i in range(2,len(nums)):
+#             dp[i] = max(dp[i-1],dp[i-2] + nums[i])
+#         return dp[-1]
+#####################################house robber2
+# class Solution:
+#     def rob(self, nums: List[int]) -> int:
+#         if not nums:
+#             return 0
+#         if len(nums) == 1:
+#             return nums[0]   
+
+#         def helper(nums):
+#             dp = [0] * len(nums)
+#             dp[0] = nums[0]
+#             if len(nums)>1:
+#                 dp[1] = max(nums[0], nums[1])
+#             for i in range(2, len(nums)):
+#                 dp[i] = max(dp[i-1], dp[i-2] + nums[i])
+#             return dp[-1]
+
+#         max1 = helper(nums[:-1])
+#         max2 = helper(nums[1:])
+
+#         return max(max1,max2)    
+# m = int(input())
+# n = int(input())
+# dp = [[-1 for i in range(m)] for j in range(n)]
+# print(dp)
+###########################min path sum
+# class Solution:
+#     def minPathSum(self, grid: List[List[int]]) -> int:
+#         m = len(grid)
+#         n = len(grid[0])
+#         dp = [[-1 for i in range(n)] for j in range(m)]
+#         for i in range(m):
+#             for j in range(n):
+#                 if i==0 and j==0:
+#                     dp[i][j] = grid[i][j]
+
+#                 else:
+#                     up = float('inf')
+#                     left = float('inf')
+
+#                     if i>0:
+#                         up = dp[i-1][j]
+#                     if j>0:
+#                         left = dp[i][j-1]
+
+#                     dp[i][j] = min(up,left)+grid[i][j]
+#         return dp[m-1][n-1]      
+####################################min path sum triangle
+# class Solution:
+#     def minimumTotal(self, triangle: List[List[int]]) -> int:
+#         n = len(triangle)
+
+#         dp = [[0  for j in range(n)]for i in range(n)]
+
+#         for j in range(n):
+#            dp[n-1][j] = triangle[n-1][j]
+
+#         for i in range(n-2,-1,-1):
+#             for j in range(i,-1,-1):
+#                 down = triangle[i][j] + dp[i+1][j]
+#                 diagonal = triangle[i][j]+dp[i+1][j+1]
+
+#                 dp[i][j] = min(down,diagonal)
+
+#         return dp[0][0]         
+###################################
+
+
+        
