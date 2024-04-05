@@ -796,6 +796,6 @@
 
 #                 dp[i][j] =matrix[i][j]+ min(left,down,right)
 #         return min(dp[n-1])          
-        
+       
 
         
